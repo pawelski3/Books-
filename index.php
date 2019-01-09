@@ -27,7 +27,7 @@ and open the template in the editor.
         
         
         $count=$pdo->query('SELECT COUNT(Numer) as cnt FROM odzera')-> fetch()['cnt'];
-        $page=isSet($_GET['page'])?intval($_GET['page']-1):1;
+        $page=isSet($_GET['page'])?intval($_GET['page']-1):0;
         $limit=10;
         $allPage=ceil($count/$limit);
         $from=$page*$limit;
